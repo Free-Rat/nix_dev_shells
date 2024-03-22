@@ -21,7 +21,7 @@
           packages = with pkgs; [
             maven
 			gradle
-            # jdk
+            jdk21
             git
 			jetbrains.idea-community
 			jetbrains.jdk
