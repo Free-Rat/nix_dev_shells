@@ -21,10 +21,10 @@
           '';
 
           packages = (with pkgs; [
-            vscode
+            # vscode
             git
             python311
-            vscode-extensions.ms-toolsai.jupyter
+            # vscode-extensions.ms-toolsai.jupyter
 
           ]) ++ (with pkgs.python311Packages; [
             numpy
