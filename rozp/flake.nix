@@ -1,5 +1,5 @@
 {
-  description = "Flake with shell for Web Project";
+  description = "Flake with shell for przetwarzanie rozproszone Project";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -15,19 +15,18 @@
         pkgs.mkShell {
 
           shellHook = ''
-		  	cd ~/uni/web
+            echo "Hello in Przetwarzanie rozproszone"
           '';
 
           packages = (with pkgs; [
-            # git
-			# sass
-
-			# react
-			nodejs_21
-			# nodePackages_latest.nodemon
-			# yarn
-			# nodePackages.create-react-app
-
+            gnumake
+			ctags
+			mpi
+            bash
+            gpp
+            gcc
+            clang-tools_17
+            git
           ]);
         };
     };
